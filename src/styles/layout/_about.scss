@@ -1,0 +1,13 @@
+.about {
+    height: 50vh;
+
+    .about__container {
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about__text {
+        width: 60%;
+    }
+}
