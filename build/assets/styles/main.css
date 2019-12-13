@@ -109,6 +109,8 @@ a {
         margin-right: 0; }
       .header .header__socials .socials__item .item__link {
         color: #939393; }
+      .header .header__socials .socials__item .link__img {
+        width: 35px; }
 
 .hero {
   height: 100vh; }
