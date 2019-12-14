@@ -1,10 +1,16 @@
 .about {
-    height: 50vh;
+    height: 80vh;
+    background: linear-gradient(180deg, #DCCCE6 0%, #B7A2F0 100%);
+    color: #fff;
 
     .about__container {
         height: 100%;
         align-items: center;
         justify-content: center;
+    }
+
+    .about__subtitle {
+        color: #fff;
     }
 
     .about__text {

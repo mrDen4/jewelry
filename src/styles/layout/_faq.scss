@@ -1,4 +1,11 @@
 .faq {
+    height: 80vh;
+
+    .faq__container {
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
 
     .faq__list {
         display: flex;

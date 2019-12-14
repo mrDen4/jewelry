@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
 
     .header__container {
         display: flex;
@@ -24,10 +24,19 @@
         justify-content: space-between;
         padding: 15px 0;
         background: #fff;
+        width: 100vw;
+
+        .header__container {
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            max-width: 1170px;
+        }
     }
 
     .header__menu {
         display: flex;
+        width: 500px;
 
         .menu__link {
             color: $gray;
@@ -38,6 +47,8 @@
 
     .header__socials {
         display: flex;
+        width: 500px;
+        justify-content: flex-end;
         
         .socials__item {
             margin-right: 15px;
