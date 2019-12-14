@@ -4,6 +4,7 @@
     top: 0;
     left: 0;
     width: 100vw;
+    z-index: 1000;
 
     .header__container {
         display: flex;
@@ -15,7 +16,7 @@
         justify-content: center;
         background: #fe8782;
         color: #fff;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .header__bottom {
@@ -41,7 +42,13 @@
         .menu__link {
             color: $gray;
             margin-right: 15px;
-            font-size: 18px;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: .3s;
+            
+            &:hover {
+                color: $blue;
+            }
         }
     }
 
@@ -62,7 +69,7 @@
             }
 
             .link__img {
-                width: 35px;
+                height: 20px;
             }
         }
     }

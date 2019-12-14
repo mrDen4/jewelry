@@ -28,6 +28,37 @@
                 font-size: 20px;
                 margin-top: 0;
             }
+
+            .block__btn {
+                width: 80%;
+                background: $blue;
+                font-size: 18px;
+                color: #ffffff;
+                position: absolute;
+                padding: 0;
+                bottom: 0;
+                height: 0;
+                border: none;
+                cursor: pointer;
+                transition: .3s;
+                overflow: hidden;
+                outline: none;
+            }
+
+            .item__block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                cursor: pointer;
+
+                &:hover {
+                    .block__btn {
+                        height: 50px;
+                    }
+                }
+            }
         }
     }
 }
