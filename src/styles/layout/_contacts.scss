@@ -30,6 +30,10 @@
         justify-content: center;
         width: 60%;
 
+        @include phones() {
+            width: 100%;
+        }
+
         .form__row {
             display: flex;
             align-items: center;

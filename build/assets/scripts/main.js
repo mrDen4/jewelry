@@ -1,9 +1,17 @@
 $(document).ready(function () {
     // Вывод меню
-    $('.header__menu').on('click', function () {
-        $('.header__menu-list').toggleClass('header__menu-list--active');
-        $('.menu__img--open').toggleClass('menu__img--open--active');
-        $('.menu__img--exit').toggleClass('menu__img--exit--active');
+    $('.list__item').on('click', function () {
+        $('.popup').toggleClass('popup--active');
+        $('.bg').toggleClass('bg--active');
+    });
+
+    $('.popup .form__exit').on('click', function () {
+        $('.popup').toggleClass('popup--active');
+        $('.bg').toggleClass('bg--active');
+    });
+
+    $('.bg').on('click', function () {
+        $('.popup').toggleClass('popup--active');
         $('.bg').toggleClass('bg--active');
     });
 });

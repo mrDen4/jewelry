@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    z-index: 1000;
+    z-index: 100;
 
     .header__container {
         display: flex;
@@ -31,13 +31,22 @@
             align-items: center;
             justify-content: space-between;
             flex-direction: row;
+            width: 1000px;
             max-width: 1170px;
+
+            @include phones() {
+                flex-direction: column;
+                justify-content: center;
+            }
         }
     }
 
     .header__menu {
         display: flex;
-        width: 500px;
+
+        @include phones() {
+            width: 100%;
+        }
 
         .menu__link {
             color: $gray;
@@ -54,8 +63,11 @@
 
     .header__socials {
         display: flex;
-        width: 500px;
         justify-content: flex-end;
+
+        @include phones() {
+            display: none;
+        }
         
         .socials__item {
             margin-right: 15px;

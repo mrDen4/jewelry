@@ -2,6 +2,11 @@
     height: 100vh;
     background: linear-gradient(180deg, #BD8AF4 0%, #F1A7E6 100%);
 
+    @include phones() {
+        height: 60vh;
+        padding-top: 170px;
+    }
+
     .hero__container {
         height: 100%;
         align-items: center;
@@ -14,5 +19,9 @@
         text-transform: uppercase;
         text-align: center;
         font-weight: normal;
+
+        @include phones() {
+            font-size: 32px;
+        }
     }
 }
