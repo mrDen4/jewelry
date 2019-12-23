@@ -82,6 +82,12 @@
 
             .link__img {
                 height: 20px;
+                filter: grayscale(100%); 
+                transition: .3s;
+
+                &:hover {
+                    filter: grayscale(0); 
+                }
             }
         }
     }

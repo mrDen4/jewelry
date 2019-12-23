@@ -138,7 +138,11 @@ a {
       .header .header__socials .socials__item .item__link {
         color: #939393; }
       .header .header__socials .socials__item .link__img {
-        height: 20px; }
+        height: 20px;
+        filter: grayscale(100%);
+        transition: .3s; }
+        .header .header__socials .socials__item .link__img:hover {
+          filter: grayscale(0); }
 
 .hero {
   height: 100vh;
@@ -165,7 +169,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  position: relative; }
   .shop .shop__list .list__item {
     width: 30%;
     display: flex;
@@ -175,18 +180,22 @@ a {
     @media screen and (max-width: 576px) {
       .shop .shop__list .list__item {
         width: 100%; } }
-    .shop .shop__list .list__item .item__img {
-      width: 80%; }
+    .shop .shop__list .list__item img {
+      width: 100%; }
     .shop .shop__list .list__item .item__title {
       color: #939393;
       margin-bottom: 0;
       font-weight: normal; }
+    .shop .shop__list .list__item .item__text {
+      display: none; }
+    .shop .shop__list .list__item .item__btn {
+      display: none; }
     .shop .shop__list .list__item .item__price {
       color: #896ffe;
       font-size: 20px;
       margin-top: 0; }
     .shop .shop__list .list__item .block__btn {
-      width: 80%;
+      width: 100%;
       background: #9d88ff;
       font-size: 18px;
       color: #ffffff;
@@ -208,6 +217,87 @@ a {
       cursor: pointer; }
       .shop .shop__list .list__item .item__block:hover .block__btn {
         height: 50px; }
+    .shop .shop__list .list__item .item__exit {
+      display: none; }
+    .shop .shop__list .list__item--active {
+      position: fixed;
+      height: 100vh;
+      width: 80vw;
+      flex-direction: row;
+      align-items: flex-start;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      justify-content: space-around;
+      top: 0;
+      left: 50%;
+      margin-left: -40vw;
+      z-index: 1000;
+      background: #ffffff; }
+      @media screen and (max-width: 576px) {
+        .shop .shop__list .list__item--active {
+          flex-direction: column;
+          width: 100vw;
+          margin-left: 0;
+          left: 0;
+          padding: 20px; } }
+      .shop .shop__list .list__item--active .item__exit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: #8368ff;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer; }
+      .shop .shop__list .list__item--active .item__block {
+        width: 45%;
+        height: 100%;
+        cursor: initial; }
+        @media screen and (max-width: 576px) {
+          .shop .shop__list .list__item--active .item__block {
+            width: 100%;
+            height: initial; } }
+        .shop .shop__list .list__item--active .item__block img {
+          width: initial;
+          height: 95%; }
+          @media screen and (max-width: 576px) {
+            .shop .shop__list .list__item--active .item__block img {
+              width: 60%;
+              height: initial; } }
+        .shop .shop__list .list__item--active .item__block .block__btn {
+          display: none; }
+      .shop .shop__list .list__item--active .item__about {
+        width: 40%;
+        display: flex;
+        flex-direction: column; }
+        @media screen and (max-width: 576px) {
+          .shop .shop__list .list__item--active .item__about {
+            width: 100%; } }
+      .shop .shop__list .list__item--active .item__title {
+        order: 0; }
+      .shop .shop__list .list__item--active .item__text {
+        order: 1; }
+      .shop .shop__list .list__item--active .item__price {
+        order: 2; }
+      .shop .shop__list .list__item--active .item__text {
+        display: initial; }
+      .shop .shop__list .list__item--active .item__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        font-size: 18px;
+        order: 3;
+        border: none;
+        color: #fff;
+        background: #8368ff;
+        cursor: pointer;
+        transition: .3s; }
+        .shop .shop__list .list__item--active .item__btn:hover {
+          opacity: .8; }
 
 .about {
   height: 80vh;
@@ -223,7 +313,7 @@ a {
     width: 60%; }
 
 .faq {
-  height: 80vh; }
+  min-height: 80vh; }
   .faq .faq__container {
     align-items: center;
     justify-content: center;
@@ -232,15 +322,23 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    width: 60%; }
     .faq .faq__list .list__item {
-      width: 30%;
+      width: 18%;
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      justify-content: center;
+      text-align: center; }
       @media screen and (max-width: 576px) {
         .faq .faq__list .list__item {
           width: 100%; } }
+      .faq .faq__list .list__item .item__img {
+        width: 100%;
+        margin: 20px 0; }
+      .faq .faq__list .list__item .item__about {
+        font-weight: 200; }
 
 .contacts {
   background: linear-gradient(180deg, #FE87AB 0%, #FF9D94 100%);
@@ -267,13 +365,15 @@ a {
     @media screen and (max-width: 576px) {
       .contacts .contacts__form {
         width: 100%; } }
+    .contacts .contacts__form p {
+      text-align: center; }
     .contacts .contacts__form .form__row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%; }
-      .contacts .contacts__form .form__row .form__inp {
-        width: 45%; }
+      .contacts .contacts__form .form__row .your-name {
+        margin-right: 10px; }
     .contacts .contacts__form .form__inp {
       background: none;
       border: none;
@@ -291,7 +391,9 @@ a {
       border: none;
       border-bottom: 1px solid #fff;
       width: 100%;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      outline: none;
+      color: #fff; }
       .contacts .contacts__form .form__textarea::-webkit-input-placeholder {
         color: #fff; }
     .contacts .contacts__form .form__btn {
@@ -326,7 +428,8 @@ a {
   margin-left: -200px;
   z-index: 200;
   padding: 40px 20px;
-  transition: .3s; }
+  transition: .3s;
+  text-align: center; }
   @media screen and (max-width: 576px) {
     .popup {
       width: 100%; } }

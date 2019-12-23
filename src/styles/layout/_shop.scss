@@ -5,6 +5,7 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        position: relative;
 
         .list__item {
             width: 30%;
@@ -17,14 +18,22 @@
                 width: 100%;
             }
 
-            .item__img {
-                width: 80%;
+            img {
+                width: 100%;
             }
 
             .item__title {
                 color: $gray;
                 margin-bottom: 0;
                 font-weight: normal;
+            }
+
+            .item__text {
+                display: none;
+            }
+
+            .item__btn {
+                display: none;
             }
 
             .item__price {
@@ -34,7 +43,7 @@
             }
 
             .block__btn {
-                width: 80%;
+                width: 100%;
                 background: $blue;
                 font-size: 18px;
                 color: #ffffff;
@@ -60,6 +69,118 @@
                 &:hover {
                     .block__btn {
                         height: 50px;
+                    }
+                }
+            }
+
+            .item__exit {
+                display: none;
+            }
+
+            &--active {
+                position: fixed;
+                height: 100vh;
+                width: 80vw;
+                flex-direction: row;
+                align-items: flex-start;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                justify-content: space-around;
+                top: 0;
+                left: 50%;
+                margin-left: -40vw;
+                z-index: 1000;
+                background: #ffffff;
+
+                @include phones() {
+                 flex-direction: column;   
+                 width: 100vw;
+                 margin-left: 0;
+                 left: 0;
+                 padding: 20px;
+                }
+
+
+                .item__exit {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    color: #8368ff;
+                    background: none;
+                    border: none;
+                    font-size: 24px;
+                    cursor: pointer;
+                }
+
+                .item__block {
+                    width: 45%;
+                    height: 100%;
+                    cursor: initial;
+
+                    @include phones() {
+                        width: 100%;
+                        height: initial;
+                    }
+
+                    img {
+                        width: initial;
+                        height: 95%;
+
+                        @include phones() {
+                            width: 60%;
+                            height: initial;
+                        }
+                    }
+
+                    .block__btn {
+                        display: none;
+                    }
+                }
+
+                .item__about {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include phones() {
+                        width: 100%;
+                    }
+                }
+
+                .item__title {
+                    order: 0;
+                }
+
+                .item__text {
+                    order: 1;
+                }
+
+                .item__price {
+                    order: 2;
+                }
+
+                .item__text {
+                    display: initial;
+                }
+
+                .item__btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px;
+                    font-size: 18px;
+                    order: 3;
+                    border: none;
+                    color: #fff;
+                    background: #8368ff;
+                    cursor: pointer;
+                    transition: .3s;
+
+                    &:hover {
+                        opacity: .8;
                     }
                 }
             }

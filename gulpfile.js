@@ -15,15 +15,15 @@ const paths = {
     },
     styles: {
         src: 'src/styles/**/*.*',
-        dest: 'build/assets/styles/'
+        dest: 'build/assets/css/'
     },    
     images: {
         src: 'src/img/**/*.*',
-        dest: 'build/assets/images/'
+        dest: 'build/assets/img/'
     },
     scripts: {
         src: 'src/js/**/*.js',
-        dest: 'build/assets/scripts/'
+        dest: 'build/assets/js/'
     },
     php: {
         src: 'src/php/**/*.php',

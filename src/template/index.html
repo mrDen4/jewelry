@@ -8,7 +8,7 @@
     <title>Ювелирный магазин</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="./assets/styles/main.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
@@ -24,92 +24,95 @@
             <div class="header__bottom">
                 <div class="container header__container">
                     <nav class="header__menu">
-                        <a href="#" class="menu__link">Главная</a>
-                        <a href="#" class="menu__link">Магазин</a>
-                        <a href="#" class="menu__link">Обо мне</a>
-                        <a href="#" class="menu__link">Связь</a>
+                        <a href="#hero" class="menu__link">Главная</a>
+                        <a href="#shop" class="menu__link">Магазин</a>
+                        <a href="#about" class="menu__link">Обо мне</a>
+                        <a href="#contacts" class="menu__link">Связь</a>
                     </nav>
                     <ul class="header__socials">
                         <li class="socials__item">
                             <a href="#" class="item__link">
-                                <img src="./assets/images/socials/instagram.svg" alt="" class="link__img">
+                                <img src="./assets/img/socials/instagram.svg" alt="" class="link__img">
                             </a>
                         </li>
                         <li class="socials__item">
                             <a href="#" class="item__link">
-                                <img src="./assets/images/socials/vk.svg" alt="" class="link__img">
+                                <img src="./assets/img/socials/vk.svg" alt="" class="link__img">
                             </a>
                         </li>
                         <li class="socials__item">
                             <a href="#" class="item__link">
-                                <img src="./assets/images/socials/youtube.svg" alt="" class="link__img">
+                                <img src="./assets/img/socials/youtube.svg" alt="" class="link__img">
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </header>
-        <section class="section hero">
+        <section class="section hero" id="hero">
             <div class="container hero__container">
                 <h1 class="hero__title">Заголовок для главного экрана</h1>
             </div>
         </section>
-        <section class="section shop">
+        <section class="section shop" id="shop">
             <div class="container shop__container">
                 <h2 class="subtitle shop__subtitle">Магазин</h2>
                 <ul class="shop__list">
                     <li class="list__item">
+                        <button class="item__exit">&#215;</button>
                         <div class="item__block">
-                            <img src="./assets/images/item.jpg" alt="item" class="item__img">
+                            <img src="./assets/img/item.jpg" alt="item" class="item__img">
                             <button class="block__btn">Подробнее</button>
                         </div>
-                        <h3 class="item__title">Название товара</h3>
-                        <p class="item__price">10 000 руб.</p>
+                        <div class="item__about">
+                            <h3 class="item__title">Название товара</h3>
+                            <p class="item__price">10 000 руб.</p>
+                            <p class="item__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+                                blanditiis
+                                corporis iure quos odit repellendus dicta minus assumenda dolorum totam atque
+                                repudiandae
+                                laudantium, mollitia doloribus, qui facere nemo consectetur tenetur.</p>
+                            <button class="item__btn">Заказать</button>
+                        </div>
                     </li>
                     <li class="list__item">
+                        <button class="item__exit">&#215;</button>
                         <div class="item__block">
-                            <img src="./assets/images/item.jpg" alt="item" class="item__img">
+                            <img src="./assets/img/item.jpg" alt="item" class="item__img">
                             <button class="block__btn">Подробнее</button>
                         </div>
-                        <h3 class="item__title">Название товара</h3>
-                        <p class="item__price">10 000 руб.</p>
+                        <div class="item__about">
+                            <h3 class="item__title">Название товара</h3>
+                            <p class="item__price">1120 000 руб.</p>
+                            <p class="item__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+                                blanditiis
+                                corporis iure quos odit repellendus dicta minus assumenda dolorum totam atque
+                                repudiandae
+                                laudantium, mollitia doloribus, qui facere nemo consectetur tenetur.</p>
+                            <button class="item__btn">Заказать</button>
+                        </div>
                     </li>
                     <li class="list__item">
+                        <button class="item__exit">&#215;</button>
                         <div class="item__block">
-                            <img src="./assets/images/item.jpg" alt="item" class="item__img">
+                            <img src="./assets/img/item.jpg" alt="item" class="item__img">
                             <button class="block__btn">Подробнее</button>
                         </div>
-                        <h3 class="item__title">Название товара</h3>
-                        <p class="item__price">10 000 руб.</p>
-                    </li>
-                    <li class="list__item">
-                        <div class="item__block">
-                            <img src="./assets/images/item.jpg" alt="item" class="item__img">
-                            <button class="block__btn">Подробнее</button>
+                        <div class="item__about">
+                            <h3 class="item__title">Название товара</h3>
+                            <p class="item__price">13210 000 руб.</p>
+                            <p class="item__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+                                blanditiis
+                                corporis iure quos odit repellendus dicta minus assumenda dolorum totam atque
+                                repudiandae
+                                laudantium, mollitia doloribus, qui facere nemo consectetur tenetur.</p>
+                            <button class="item__btn">Заказать</button>
                         </div>
-                        <h3 class="item__title">Название товара</h3>
-                        <p class="item__price">10 000 руб.</p>
-                    </li>
-                    <li class="list__item">
-                        <div class="item__block">
-                            <img src="./assets/images/item.jpg" alt="item" class="item__img">
-                            <button class="block__btn">Подробнее</button>
-                        </div>
-                        <h3 class="item__title">Название товара</h3>
-                        <p class="item__price">10 000 руб.</p>
-                    </li>
-                    <li class="list__item">
-                        <div class="item__block">
-                            <img src="./assets/images/item.jpg" alt="item" class="item__img">
-                            <button class="block__btn">Подробнее</button>
-                        </div>
-                        <h3 class="item__title">Название товара</h3>
-                        <p class="item__price">10 000 руб.</p>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="section about">
+        <section class="section about" id="about">
             <div class="container about__container">
                 <h2 class="subtitle about__subtitle">Обо мне</h2>
                 <p class="about__text">
@@ -119,26 +122,26 @@
                 </p>
             </div>
         </section>
-        <section class="section faq">
+        <section class="section faq" id="faq">
             <div class="container faq__container">
                 <h2 class="subtitle faq__subtitle">Полезно знать</h2>
                 <ul class="faq__list">
                     <li class="list__item">
-                        <img src="#" alt="item" class="item__img">
-                        <h3 class="item__about">Супер полезная информация</h3>
+                        <img src="./assets/img/faq/home.svg" alt="item" class="item__img">
+                        <h3 class="item__about">100% ХОУМ-МЕЙД</h3>
                     </li>
                     <li class="list__item">
-                        <img src="#" alt="item" class="item__img">
-                        <h3 class="item__about">Супер полезная информация</h3>
+                        <img src="./assets/img/faq/warning.svg" alt="item" class="item__img">
+                        <h3 class="item__about">СОДЕРЖИТ БОРАКС</h3>
                     </li>
                     <li class="list__item">
-                        <img src="#" alt="item" class="item__img">
-                        <h3 class="item__about">Супер полезная информация</h3>
+                        <img src="./assets/img/faq/cold.svg" alt="item" class="item__img">
+                        <h3 class="item__about">ЛУЧШЕ ДЕРЖАТЬ В КОМНАТНОЙ ТЕМПЕРАТУРЕ</h3>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="section contacts">
+        <section class="section contacts" id="contacts">
             <div class="container contacts__container">
                 <h2 class="subtitle contacts__subtitle">Я на связи</h2>
                 <div class="contacts__block">
@@ -175,7 +178,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./assets/scripts/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
