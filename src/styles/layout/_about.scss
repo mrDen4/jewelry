@@ -11,9 +11,19 @@
 
     .about__subtitle {
         color: #fff;
+
+        @include phones() {
+            font-size: 25px;
+        }
     }
 
     .about__text {
-        width: 60%;
+        width: 80%;
+        font-size: 14px;
+        text-align: justify;
+
+        @include phones() {
+            width: 100%;
+        }
     }
 }

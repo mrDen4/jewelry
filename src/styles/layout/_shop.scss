@@ -6,6 +6,8 @@
         justify-content: space-between;
         flex-wrap: wrap;
         position: relative;
+        margin: 0;
+        list-style: none;
 
         .list__item {
             width: 30%;
@@ -20,6 +22,7 @@
 
             img {
                 width: 100%;
+                height: initial;
             }
 
             .item__title {
@@ -119,6 +122,7 @@
                     width: 45%;
                     height: 100%;
                     cursor: initial;
+                    overflow: hidden;
 
                     @include phones() {
                         width: 100%;
@@ -126,8 +130,8 @@
                     }
 
                     img {
-                        width: initial;
-                        height: 95%;
+                        width: 100%;
+                        height: initial;
 
                         @include phones() {
                             width: 60%;

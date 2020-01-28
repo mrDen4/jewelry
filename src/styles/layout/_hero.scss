@@ -1,6 +1,8 @@
 .hero {
     height: 100vh;
-    background: linear-gradient(180deg, #BD8AF4 0%, #F1A7E6 100%);
+    background: url('../img/hero-bg.png');
+    background-size: cover;
+    padding-top: 90px;
 
     @include phones() {
         height: 60vh;
@@ -11,6 +13,8 @@
         height: 100%;
         align-items: center;
         justify-content: center;
+        background: url('../img/hero-bg-text.png') no-repeat center;
+        background-size: contain;
     }
 
     .hero__title {

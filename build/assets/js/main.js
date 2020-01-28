@@ -22,8 +22,9 @@ $(document).ready(function () {
     });
 
     $('.bg').on('click', function () {
-        $('.popup').toggleClass('popup--active');
-        $('.bg').toggleClass('bg--active');
+        $('.popup').removeClass('popup--active');
+        $('.bg').removeClass('bg--active');
+        $('.list__item').removeClass('list__item--active');
     });
 
     $(".header__menu").on("click","a", function (event) {
